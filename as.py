@@ -1,6 +1,7 @@
 import requests
 import json
 import datetime
+import time
 class bcolors:
     HEADER = '\033[95m'
     OKBLUE = '\033[94m'
@@ -68,6 +69,7 @@ if keyVal in customer:
         except:
             print(f"{bcolors.FAIL}{bcolors.BOLD}")
             print("Server Error")
+        time.sleep(2);
         try:
             requests.post(url2, data = myobj1, headers = {"x-api-key": name,"x-app-key":"000oc0so48owkw4s0wwo4c00g00804w80gwkw8kg"})
             print("SMS to ",i)
@@ -75,6 +77,7 @@ if keyVal in customer:
         except:
             print(f"{bcolors.FAIL}{bcolors.BOLD}")
             print("Server Error")
+        time.sleep(2);
         try:
             requests.post(url2, data = myobj2, headers = {"x-api-key": name,"x-app-key":"000oc0so48owkw4s0wwo4c00g00804w80gwkw8kg"})
             print("SMS to ",i)
@@ -82,55 +85,7 @@ if keyVal in customer:
         except:
             print(f"{bcolors.FAIL}{bcolors.BOLD}")
             print("Server Error")
-        try:
-            requests.post(url2, data = myobj3, headers = {"x-api-key": name,"x-app-key":"000oc0so48owkw4s0wwo4c00g00804w80gwkw8kg"})
-            print("SMS to ",i)
-            i=i+1
-        except:
-            print(f"{bcolors.FAIL}{bcolors.BOLD}")
-            print("Server Error")
-        try:
-            requests.post(url2, data = myobj4, headers = {"x-api-key": name,"x-app-key":"000oc0so48owkw4s0wwo4c00g00804w80gwkw8kg"})
-            print("SMS to ",i)
-            i=i+1
-        except:
-            print(f"{bcolors.FAIL}{bcolors.BOLD}")
-            print("Server Error")
-        try:
-            requests.post(url2, data = myobj5, headers = {"x-api-key": name,"x-app-key":"000oc0so48owkw4s0wwo4c00g00804w80gwkw8kg"})
-            print("SMS to ",i)
-            i=i+1
-        except:
-            print(f"{bcolors.FAIL}{bcolors.BOLD}")
-            print("Server Error")
-        try:
-            requests.post(url2, data = myobj6, headers = {"x-api-key": name,"x-app-key":"000oc0so48owkw4s0wwo4c00g00804w80gwkw8kg"})
-            print("SMS to ",i)
-            i=i+1
-        except:
-            print(f"{bcolors.FAIL}{bcolors.BOLD}")
-            print("Server Error")
-        try:
-            requests.post(url2, data = myobj7, headers = {"x-api-key": name,"x-app-key":"000oc0so48owkw4s0wwo4c00g00804w80gwkw8kg"})
-            print("SMS to ",i)
-            i=i+1
-        except:
-            print(f"{bcolors.FAIL}{bcolors.BOLD}")
-            print("Server Error")
-        try:
-            requests.post(url2, data = myobj8, headers = {"x-api-key": name,"x-app-key":"000oc0so48owkw4s0wwo4c00g00804w80gwkw8kg"})
-            print("SMS to ",i)
-            i=i+1
-        except:
-            print(f"{bcolors.FAIL}{bcolors.BOLD}")
-            print("Server Error")
-        try:
-            requests.post(url2, data = myobj9, headers = {"x-api-key": name,"x-app-key":"000oc0so48owkw4s0wwo4c00g00804w80gwkw8kg"})
-            print("SMS to ",i)
-            i=i+1
-        except:
-            print(f"{bcolors.FAIL}{bcolors.BOLD}")
-            print("Server Error")
+
 else:
     # Print the message if the value does not exist
     print("SerVer Down!!!!")
